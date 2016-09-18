@@ -57,7 +57,6 @@ PrototypPatternDemo，我们的演示类使用 ShapeCache 类来获取 Shape 对
 步骤 4
     PrototypePatternDemo 使用 ShapeCache 类来获取存储在 Hashtable 中的形状的克隆。
     PrototypePatternDemo.java
-
 步骤 5
     验证输出。
 
