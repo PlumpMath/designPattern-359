@@ -1,6 +1,7 @@
 package creational.adapter;
 
 public class AudioPlayer implements MediaPlayer {
+
     MediaAdapter mediaAdapter;
 
     @Override
@@ -19,4 +20,5 @@ public class AudioPlayer implements MediaPlayer {
         }
 
     }
+
 }

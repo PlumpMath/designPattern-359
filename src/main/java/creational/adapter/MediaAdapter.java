@@ -20,4 +20,5 @@ public class MediaAdapter implements MediaPlayer {
             advancedMusicPlayer.playMp4(fileName);
         }
     }
+
 }

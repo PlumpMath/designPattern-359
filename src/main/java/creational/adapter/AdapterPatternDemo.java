@@ -1,6 +1,7 @@
 package creational.adapter;
 
 public class AdapterPatternDemo {
+
     public static void main(String[] args) {
         AudioPlayer audioPlayer = new AudioPlayer();
 
@@ -9,4 +10,5 @@ public class AdapterPatternDemo {
         audioPlayer.play("vlc", "far far away.vlc");
         audioPlayer.play("avi", "mind me.avi");
     }
+
 }
