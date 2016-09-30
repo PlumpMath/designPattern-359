@@ -9,7 +9,6 @@ public class CriteriaSingle implements Criteria {
     public List<Person> meetCriteria(List<Person> persons) {
         return persons.stream().filter(p -> p.getMaritalStatus().equalsIgnoreCase("SINGLE"))
                 .collect(Collectors.toList());
-
     }
 
 }

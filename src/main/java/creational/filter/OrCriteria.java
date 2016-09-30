@@ -1,6 +1,8 @@
 package creational.filter;
 
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class OrCriteria implements Criteria {
 
@@ -17,11 +19,10 @@ public class OrCriteria implements Criteria {
         List<Person> firstCriteriaItems = criteria.meetCriteria(persons);
         List<Person> otherCriteriaItems = otherCriteria.meetCriteria(persons);
 
-        for (Person person : otherCriteriaItems) {
-            if (!firstCriteriaItems.contains(person)) {
-                firstCriteriaItems.add(person);
-            }
-        }
+        firstCriteriaItems.addAll(otherCriteriaItems);
+        firstCriteriaItems = Stream.of(firstCriteriaItems.toArray(new Person[0])).distinct()
+                .collect(Collectors.toList());
+
         return firstCriteriaItems;
     }
 
